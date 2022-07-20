@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Cascadia Code';
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.boton {
+    color: #fbfcfc;
+    border: none;
+    font-family: monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #00b044;
+    padding: 3rem 4.5rem;
+    border-radius: .4rem;
+    transition: background-color .3s ease;
+    font-size: 4rem;
+}
+
+.boton:hover {
+    background-color: #8f2a24;
+    cursor: pointer;
+}
+
+.so {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+}
+
+.titulo {
+    font-family: 'Cascadia Code';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 7rem;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif {
+    width: 20rem;
+    height: 20rem;
+}
+
+.gif_click {
+    width: 40rem;
+    height: 40rem;
+}
+
+.abre_aqui {
+    font-family: 'Cascadia Code';
+    font-size: 8rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.tittle_start {
+    font-family: 'Cascadia Code';
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-top:5rem;
+    margin-bottom: 5rem;
+}
+
+.emoji {
+    align-items: center;
+    font-size: 2rem;
+}
+
+.mosaico {
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 13.5% 13.5% 13.5%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.cuadro {
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadro:hover {
+    opacity: 50%;
+}
+
+.info {
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    color: #707070;
+    font-size: 8rem;
+    font-family: 'Cascadia Code';
+}
+
+.tittle_end {
+    font-family: 'Cascadia Code';
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: auto;
+}
+
+.validation_square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper { position: relative; overflow: hidden;}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 10rem;
+    height: 2.5rem;
+    padding: 0 .5rem;
+    border-radius: .25rem;
+    border: 1px solid #585858;
+    color: #f9f9f9;
+}
+
+.validation {
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    transform: translate(5rem, -50%);
+    opacity: 0;
+    color: #f9f9f9;
+    transition: all .35s;
+}
+
+input:valid { border-color: #55d688;}
+input:invalid{ border-color: #fd4444;}
+input:invalid ~ .validation {
+    opacity: 1;
+    transform: translate(0, -50%)
+}
+
+.soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 27rem;
+}
+
+.span {
+    font-family: 'Cascadia Code';
+    white-space: nowrap;
+    border-right: 3px solid #000000;
+    width: 8ch;
+    overflow: hidden;
+    font-size: 8rem;
+    color: #000000;
+    animation: texto 3s 1 steps(8), cursor .5s infinite;
+}
+
+@keyframes texto {0% {width: 0}}
+
+@keyframes cursor {50% {border-color: transparent}}
+
+.grid-container {
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 17% 17% 17%;
+    grid-template-rows: 35% 33% 35%;
+    grid-gap: 5px;
+    margin-bottom: 8rem;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: #f5f7f6;
+    color: #242329;
+    text-align: center;
+    border: 5px solid #fff;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.card__data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-250PX);
+    transition: transform 1s;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .25s .35s;
+}
+
+.card__title {
+    font-size: 26px;
+    color: #fcfdfc;
+    padding: 5px;
+    background-color: #ff90c8;
+    margin-top: 25px;
+    font-family: 'Cascadia Code';
+    font-weight: bold;
+}
+
+.card__description {
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Cascadia Code';
+}
+
+.card__btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #ff90c8;
+    transition: background-color .1s;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.card__btn:hover {
+    background: linear-gradient(to bottom, #ffd2e9, #ffddee, #fff3f9);
+    color: #484949;
+}
+
+.card:hover .card__data {
+    transform: translateY(0px);
+}
+
+.card:hover .card__img {
+    transform: translateX(250px);
+    transition-delay: 0s;
+}
+
+.audio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.mosaico {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-content: center;
+    width: 1100px;
+    height: 600px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    background-color: #fff;
+}
+
+.main_img {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai {
+    width: 500px;
+    height: 500px;
+}
+
+.main_content {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    max-width:500px;
+    max-height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_title {
+    font-size: 5rem;
+    font-family: 'Cascadia Code';
+    font-style: italic;
+}
+
+.main_text {
+    font-size: 2rem;
+    font-family: 'Cascadia Code';
+    line-height: 25px;
+}
+
+.span_song {
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: italic;
+    font-family: 'Cascadia Code';
+    white-space: nowrap;
+    border-right: 3px solid #000000;
+    width: 13ch;
+    overflow: hidden;
+    color: #000000;
+    animation: texto 3s 1 steps(13), cursor .5s infinite;
+}
+
+@keyframes texto {
+    0% {
+        width: 0
+    }
+}
+
+@keyframes cursor {
+    50% {
+    border-color: transparent}}
+
+.img_background {
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
